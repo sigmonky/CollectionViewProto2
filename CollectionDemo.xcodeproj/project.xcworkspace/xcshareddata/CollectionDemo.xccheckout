@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>54ABCD73-2C2A-4225-A3DD-E4579B9F81D5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CollectionDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>379B5C5BAE106F7862AA8C049B009CA520E9803D</key>
+		<string>https://github.com/sigmonky/CollectionViewProto2.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CollectionDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>379B5C5BAE106F7862AA8C049B009CA520E9803D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sigmonky/CollectionViewProto2.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>379B5C5BAE106F7862AA8C049B009CA520E9803D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>379B5C5BAE106F7862AA8C049B009CA520E9803D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CollectionDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
