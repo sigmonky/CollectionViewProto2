@@ -19,7 +19,10 @@
     return self;
 }
 
-
+- (void) fuckMe {
+    self.labelView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5];
+    [self setNeedsDisplay];
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

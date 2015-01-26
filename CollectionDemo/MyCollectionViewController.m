@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _labels = [@[@"label1",@"label2",@"label3",@"label4",@"label5",@"label6",@"label7",@"label8",@"label9",@"label10",@"label11",@"label12",@"label13",@"label14",@"label15",@"label1",@"label2",@"label3",@"label4",@"label5",@"label6",@"label7",@"label8",@"label9",@"label10",@"label11",@"label12",@"label13",@"label14",@"label15"] mutableCopy];
+    _labels = [@[@"C",@"F",@"G7",@"C",@"label5",@"label6",@"label7",@"label8",@"label9",@"label10",@"label11",@"label12",@"label13",@"label14",@"label15",@"label1",@"label2",@"label3",@"label4",@"label5",@"label6",@"label7",@"label8",@"label9",@"label10",@"label11",@"label12",@"label13",@"label14",@"label15"] mutableCopy];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,9 +52,39 @@
     
     long row = [indexPath row];
     
-    myCell.labelView.text = _labels[row];
+    //myCell.labelView.backgroundColor = [UIColor yellowColor];
+
     
+    
+    NSLog(@"%@ -- %@",[collectionView indexPathsForSelectedItems],indexPath);
+    if (self.selectedCell) {
+        myCell.labelView.backgroundColor = [UIColor yellowColor];
+        myCell.labelView.text = _labels[row];
+        if (self.lastSelectedCell) {
+            self.lastSelectedCell.labelView.backgroundColor = [UIColor lightGrayColor];
+        }
+        self.lastSelectedCell = myCell;
+        self.selectedCell = nil;
+    }
     return myCell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+   // MyCollectionViewCell *myCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCell" forIndexPath:indexPath];
+   
+    self.selectedCell = indexPath;
+    [collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    
+
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    MyCollectionViewCell *myCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCell" forIndexPath:indexPath];
+    
+    myCell.labelView.backgroundColor = [UIColor yellowColor];
+    self.selectedCell = myCell;
+    
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -73,6 +103,8 @@
 }
 
 
+
+
 /*
 #pragma mark - Navigation
 
@@ -84,4 +116,13 @@
 }
 */
 
+- (IBAction)selectCell:(id)sender {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:8 inSection:0];
+    
+    [self.collectionView selectItemAtIndexPath:indexPath animated:TRUE                        scrollPosition:UICollectionViewScrollPositionNone];
+    
+    self.selectedCell = indexPath;
+    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    
+}
 @end

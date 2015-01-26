@@ -10,5 +10,5 @@
 
 @interface MyCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *labelView;
-
+- (void) fuckMe;
 @end

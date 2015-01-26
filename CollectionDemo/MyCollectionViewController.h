@@ -13,5 +13,9 @@
 @interface MyCollectionViewController : UICollectionViewController
 <UICollectionViewDataSource,UICollectionViewDelegate>
 @property (strong, nonatomic) NSMutableArray *labels;
+@property (strong,nonatomic) NSIndexPath *selectedCell;
+@property (strong,nonatomic) MyCollectionViewCell *lastSelectedCell;
+
+- (IBAction)selectCell:(id)sender;
 
 @end
