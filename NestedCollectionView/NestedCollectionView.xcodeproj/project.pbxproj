@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3EB723E1A7EF75F00145676 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB723D1A7EF75F00145676 /* MyCollectionViewCell.m */; };
 		D3FA80D61A78579E001C0A85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FA80D51A78579E001C0A85 /* main.m */; };
 		D3FA80D91A78579E001C0A85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FA80D81A78579E001C0A85 /* AppDelegate.m */; };
 		D3FA80DC1A78579E001C0A85 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FA80DB1A78579E001C0A85 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3EB723C1A7EF75F00145676 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		D3EB723D1A7EF75F00145676 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		D3FA80D01A78579E001C0A85 /* NestedCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestedCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FA80D41A78579E001C0A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3FA80D51A78579E001C0A85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				D3FA80D81A78579E001C0A85 /* AppDelegate.m */,
 				D3FA80DA1A78579E001C0A85 /* ViewController.h */,
 				D3FA80DB1A78579E001C0A85 /* ViewController.m */,
+				D3EB723C1A7EF75F00145676 /* MyCollectionViewCell.h */,
+				D3EB723D1A7EF75F00145676 /* MyCollectionViewCell.m */,
 				D3FA80DD1A78579E001C0A85 /* Main.storyboard */,
 				D3FA80E01A78579E001C0A85 /* Images.xcassets */,
 				D3FA80E21A78579E001C0A85 /* LaunchScreen.xib */,
@@ -221,6 +226,7 @@
 			files = (
 				D3FA80DC1A78579E001C0A85 /* ViewController.m in Sources */,
 				D3FA80D91A78579E001C0A85 /* AppDelegate.m in Sources */,
+				D3EB723E1A7EF75F00145676 /* MyCollectionViewCell.m in Sources */,
 				D3FA80D61A78579E001C0A85 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +418,7 @@
 				D3FA80F51A78579E001C0A85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3FA80F61A78579E001C0A85 /* Build configuration list for PBXNativeTarget "NestedCollectionViewTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				D3FA80F81A78579E001C0A85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

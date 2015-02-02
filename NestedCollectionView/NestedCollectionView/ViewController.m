@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
@@ -18,7 +19,10 @@
     [super viewDidLoad];
     
     
-    _labels = [@[@"C",@"F",@"G7",@"C",@"label5",@"label6",@"label7",@"label8",@"label9",@"label10",@"label11",@"label12",@"label13",@"label14",@"label15",@"label1",@"label2",@"label3",@"label4",@"label5",@"label6",@"label7",@"label8",@"label9",@"label10",@"label11",@"label12",@"label13",@"label14",@"label15"] mutableCopy];
+    _labels = [@[@"C",@"C",@"E7",@"E7",
+                 @"A7",@"A7",@"Dm",@"Dm",
+                 @"E7",@"E7",@"Am",@"Am",
+                 @"D7",@"D7",@"Dm7",@"G7"] mutableCopy];
 
     
     
@@ -36,23 +40,50 @@
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-
-        
-        UICollectionViewCell *myCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Measure" forIndexPath:indexPath];
     
-           //long row = [indexPath row];
-        
+    MyCollectionViewCell *myCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Measure" forIndexPath:indexPath];
+    
+    long row = [indexPath row];
+    
+    //myCell.labelView.backgroundColor = [UIColor yellowColor];
+    NSLog(@"cellForItem %@ -- %@",[collectionView indexPathsForSelectedItems],indexPath);
+    if (self.selectedCell) {
         //myCell.labelView.backgroundColor = [UIColor yellowColor];
-        
-        return myCell;
+        myCell.labelView.text = _labels[row];
+        if (self.lastSelectedCell) {
+            self.lastSelectedCell.labelView.backgroundColor = [UIColor lightGrayColor];
+        }
+        self.lastSelectedCell = myCell;
+        self.selectedCell = nil;
+    }
+    return myCell;
 }
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    // MyCollectionViewCell *myCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCell" forIndexPath:indexPath];
+    
+    self.selectedCell = indexPath;
+    [collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    MyCollectionViewCell *myCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Measure" forIndexPath:indexPath];
+    NSLog(@"highlight -- %@ -- %@",[collectionView indexPathsForSelectedItems],indexPath);
+    //myCell.labelView.backgroundColor = [UIColor yellowColor];
+    self.selectedCell = indexPath;
+    
+}
+
 
 #pragma mark collection view cell layout / size
 #pragma mark Collection view layout things
 // Layout: Set cell size
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"SETTING SIZE FOR ITEM AT INDEX %d", indexPath.row);
+    //NSLog(@"SETTING SIZE FOR ITEM AT INDEX %d", indexPath.row);
     CGSize mElementSize = CGSizeMake(74, 50);
     return mElementSize;
 }
