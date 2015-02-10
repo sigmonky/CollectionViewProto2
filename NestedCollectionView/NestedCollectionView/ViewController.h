@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MyCollectionViewCell.h"
+#import "ContainerView.h"
 
 @interface ViewController : UIViewController
 <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -15,6 +16,9 @@
 @property (strong,nonatomic) NSIndexPath *selectedCell;
 @property (strong,nonatomic) MyCollectionViewCell *lastSelectedCell;
 @property (weak, nonatomic) IBOutlet UICollectionView *theChanges;
+- (IBAction)chordSelected:(id)sender;
+- (IBAction)playbackSelected:(id)sender;
+@property (weak, nonatomic) IBOutlet ContainerView *containerView;
 
 @end
 

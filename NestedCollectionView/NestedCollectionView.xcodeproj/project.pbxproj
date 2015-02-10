@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEB99F9D1A8A596D00EE1D5B /* PlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB99F981A8A596D00EE1D5B /* PlaybackController.m */; };
+		BEB99F9E1A8A596D00EE1D5B /* ChordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB99F9A1A8A596D00EE1D5B /* ChordViewController.m */; };
+		BEB99F9F1A8A596D00EE1D5B /* ContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB99F9C1A8A596D00EE1D5B /* ContainerView.m */; };
 		D3EB723E1A7EF75F00145676 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EB723D1A7EF75F00145676 /* MyCollectionViewCell.m */; };
 		D3FA80D61A78579E001C0A85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FA80D51A78579E001C0A85 /* main.m */; };
 		D3FA80D91A78579E001C0A85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FA80D81A78579E001C0A85 /* AppDelegate.m */; };
@@ -28,6 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BEB99F971A8A596D00EE1D5B /* PlaybackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackController.h; sourceTree = "<group>"; };
+		BEB99F981A8A596D00EE1D5B /* PlaybackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackController.m; sourceTree = "<group>"; };
+		BEB99F991A8A596D00EE1D5B /* ChordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordViewController.h; sourceTree = "<group>"; };
+		BEB99F9A1A8A596D00EE1D5B /* ChordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordViewController.m; sourceTree = "<group>"; };
+		BEB99F9B1A8A596D00EE1D5B /* ContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerView.h; sourceTree = "<group>"; };
+		BEB99F9C1A8A596D00EE1D5B /* ContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerView.m; sourceTree = "<group>"; };
 		D3EB723C1A7EF75F00145676 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
 		D3EB723D1A7EF75F00145676 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		D3FA80D01A78579E001C0A85 /* NestedCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestedCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +94,12 @@
 			isa = PBXGroup;
 			children = (
 				D3FA80D71A78579E001C0A85 /* AppDelegate.h */,
+				BEB99F971A8A596D00EE1D5B /* PlaybackController.h */,
+				BEB99F981A8A596D00EE1D5B /* PlaybackController.m */,
+				BEB99F991A8A596D00EE1D5B /* ChordViewController.h */,
+				BEB99F9A1A8A596D00EE1D5B /* ChordViewController.m */,
+				BEB99F9B1A8A596D00EE1D5B /* ContainerView.h */,
+				BEB99F9C1A8A596D00EE1D5B /* ContainerView.m */,
 				D3FA80D81A78579E001C0A85 /* AppDelegate.m */,
 				D3FA80DA1A78579E001C0A85 /* ViewController.h */,
 				D3FA80DB1A78579E001C0A85 /* ViewController.m */,
@@ -226,6 +241,9 @@
 			files = (
 				D3FA80DC1A78579E001C0A85 /* ViewController.m in Sources */,
 				D3FA80D91A78579E001C0A85 /* AppDelegate.m in Sources */,
+				BEB99F9F1A8A596D00EE1D5B /* ContainerView.m in Sources */,
+				BEB99F9D1A8A596D00EE1D5B /* PlaybackController.m in Sources */,
+				BEB99F9E1A8A596D00EE1D5B /* ChordViewController.m in Sources */,
 				D3EB723E1A7EF75F00145676 /* MyCollectionViewCell.m in Sources */,
 				D3FA80D61A78579E001C0A85 /* main.m in Sources */,
 			);
