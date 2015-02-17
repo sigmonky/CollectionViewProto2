@@ -9,9 +9,12 @@
 #import "ViewController.h"
 #import "ChordViewController.h"
 #import "PlaybackController.h"
+#import "Chord.h"
+#import "Progression.h"
 
 @interface ViewController ()
 @property UIViewController  *currentDataEntryVC;
+@property Progression *progression;
 @end
 
 @implementation ViewController
@@ -26,6 +29,28 @@
                  @"D7",@"D7",@"Dm7",@"G7"] mutableCopy];
 
     
+    _progression = [[Progression alloc ] init];
+    _progression.chordProgression = (NSMutableArray *)@
+    [
+     [[Chord alloc] initWithRoot:60  quality:ChordQualityMajor extension:nil],
+     [[Chord alloc] initWithRoot:60  quality:ChordQualityMajor extension:nil],
+     [[Chord alloc] initWithRoot:64 quality:ChordQualityDominant extension:nil],
+     [[Chord alloc] initWithRoot:64 quality:ChordQualityDominant extension:nil],
+     [[Chord alloc] initWithRoot:69 quality:ChordQualityDominant extension:nil],
+     [[Chord alloc] initWithRoot:69 quality:ChordQualityDominant extension:nil],
+     [[Chord alloc] initWithRoot:62 quality:ChordQualityMinor extension:nil],
+     [[Chord alloc] initWithRoot:62 quality:ChordQualityMinor extension:nil],
+     [[Chord alloc] initWithRoot:64 quality:ChordQualityDominant extension:nil],
+     [[Chord alloc] initWithRoot:64 quality:ChordQualityDominant extension:nil],
+     [[Chord alloc] initWithRoot:69 quality:ChordQualityMinor extension:nil],
+     [[Chord alloc] initWithRoot:69 quality:ChordQualityMinor extension:nil],
+     [[Chord alloc] initWithRoot:62 quality:ChordQualityDominant extension:nil],
+     [[Chord alloc] initWithRoot:62 quality:ChordQualityDominant extension:nil],
+     [[Chord alloc] initWithRoot:62 quality:ChordQualityMinor extension:nil],
+     [[Chord alloc] initWithRoot:67 quality:ChordQualityDominant extension:nil]
+     ];
+    
+    
     
     _theChanges.delegate = self;
     _theChanges.dataSource = self;
@@ -36,7 +61,7 @@
 #pragma mark - UICollectionView DataSource
 
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _labels.count;
+    return _progression.chordProgression.count;
 }
 
 
@@ -47,16 +72,17 @@
     long row = [indexPath row];
     
     //myCell.labelView.backgroundColor = [UIColor yellowColor];
+    myCell.labelView.text = [_progression.chordProgression[row] chordSymbol];
     NSLog(@"cellForItem %@ -- %@",[collectionView indexPathsForSelectedItems],indexPath);
-    if (self.selectedCell) {
+    /*if (self.selectedCell) {
         //myCell.labelView.backgroundColor = [UIColor yellowColor];
-        myCell.labelView.text = _labels[row];
+        
         if (self.lastSelectedCell) {
             self.lastSelectedCell.labelView.backgroundColor = [UIColor lightGrayColor];
         }
         self.lastSelectedCell = myCell;
         self.selectedCell = nil;
-    }
+    }*/
     return myCell;
 }
 

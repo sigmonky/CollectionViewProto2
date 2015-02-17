@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE4AD5AF1A93C59600B76785 /* Chord.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4AD5AE1A93C59600B76785 /* Chord.m */; };
+		BE4AD5B21A93C61900B76785 /* Progression.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4AD5B11A93C61900B76785 /* Progression.m */; };
 		BEB99F9D1A8A596D00EE1D5B /* PlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB99F981A8A596D00EE1D5B /* PlaybackController.m */; };
 		BEB99F9E1A8A596D00EE1D5B /* ChordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB99F9A1A8A596D00EE1D5B /* ChordViewController.m */; };
 		BEB99F9F1A8A596D00EE1D5B /* ContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB99F9C1A8A596D00EE1D5B /* ContainerView.m */; };
@@ -31,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE4AD5AD1A93C59600B76785 /* Chord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chord.h; sourceTree = "<group>"; };
+		BE4AD5AE1A93C59600B76785 /* Chord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chord.m; sourceTree = "<group>"; };
+		BE4AD5B01A93C61900B76785 /* Progression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Progression.h; sourceTree = "<group>"; };
+		BE4AD5B11A93C61900B76785 /* Progression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Progression.m; sourceTree = "<group>"; };
 		BEB99F971A8A596D00EE1D5B /* PlaybackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackController.h; sourceTree = "<group>"; };
 		BEB99F981A8A596D00EE1D5B /* PlaybackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackController.m; sourceTree = "<group>"; };
 		BEB99F991A8A596D00EE1D5B /* ChordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordViewController.h; sourceTree = "<group>"; };
@@ -96,7 +102,11 @@
 				D3FA80D71A78579E001C0A85 /* AppDelegate.h */,
 				BEB99F971A8A596D00EE1D5B /* PlaybackController.h */,
 				BEB99F981A8A596D00EE1D5B /* PlaybackController.m */,
+				BE4AD5B01A93C61900B76785 /* Progression.h */,
+				BE4AD5B11A93C61900B76785 /* Progression.m */,
 				BEB99F991A8A596D00EE1D5B /* ChordViewController.h */,
+				BE4AD5AD1A93C59600B76785 /* Chord.h */,
+				BE4AD5AE1A93C59600B76785 /* Chord.m */,
 				BEB99F9A1A8A596D00EE1D5B /* ChordViewController.m */,
 				BEB99F9B1A8A596D00EE1D5B /* ContainerView.h */,
 				BEB99F9C1A8A596D00EE1D5B /* ContainerView.m */,
@@ -241,6 +251,8 @@
 			files = (
 				D3FA80DC1A78579E001C0A85 /* ViewController.m in Sources */,
 				D3FA80D91A78579E001C0A85 /* AppDelegate.m in Sources */,
+				BE4AD5AF1A93C59600B76785 /* Chord.m in Sources */,
+				BE4AD5B21A93C61900B76785 /* Progression.m in Sources */,
 				BEB99F9F1A8A596D00EE1D5B /* ContainerView.m in Sources */,
 				BEB99F9D1A8A596D00EE1D5B /* PlaybackController.m in Sources */,
 				BEB99F9E1A8A596D00EE1D5B /* ChordViewController.m in Sources */,
