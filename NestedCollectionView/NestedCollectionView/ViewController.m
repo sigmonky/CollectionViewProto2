@@ -22,17 +22,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    _labels = [@[@"C",@"C",@"E7",@"E7",
-                 @"A7",@"A7",@"Dm",@"Dm",
-                 @"E7",@"E7",@"Am",@"Am",
-                 @"D7",@"D7",@"Dm7",@"G7"] mutableCopy];
 
     
     _progression = [[Progression alloc ] init];
+    
+    NSNumber *sixthExt = [NSNumber numberWithInt:Six];
     _progression.chordProgression = (NSMutableArray *)@
     [
-     [[Chord alloc] initWithRoot:60  quality:ChordQualityMajor extension:nil],
+     [[Chord alloc] initWithRoot:60  quality:ChordQualityMajor extension:(NSMutableArray *)@[sixthExt]],
      [[Chord alloc] initWithRoot:60  quality:ChordQualityMajor extension:nil],
      [[Chord alloc] initWithRoot:64 quality:ChordQualityDominant extension:nil],
      [[Chord alloc] initWithRoot:64 quality:ChordQualityDominant extension:nil],

@@ -57,7 +57,11 @@
 
 - (NSString *) chordSymbol {
     NSArray *noteNames = @[@"C",@"Db",@"D",@"Eb",@"E",@"F",@"Gb",@"G",@"Ab",@"A",@"Bb",@"B"];
+    NSArray *noteQualities = @[@"",@"m",@"dim",@"aug",@"7",@"sus"];
+    NSArray *extension = @[@"6",@"7",@"M7",@"b9",@"9",@"#9",@"11",@"#11",@"b13",@"13"];
     
-    return [NSString stringWithFormat:@"%@",noteNames[self.root%12]];
+    NSInteger extensionIndex = [self.extensions[0] integerValue];
+    
+    return [NSString stringWithFormat:@"%@%@%@",noteNames[self.root%12],noteQualities[self.quality],extension[extensionIndex]];
 }
 @end
