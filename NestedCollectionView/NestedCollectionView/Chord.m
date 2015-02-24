@@ -8,8 +8,15 @@
 
 #import "Chord.h"
 
+
+
 @implementation Chord
 
+
++ (NSNumber *) extension:(ChordExtensions)extension {
+    
+    return [NSNumber numberWithInt:extension];
+}
 
 -(id) initWithRoot:(int16_t)root
            quality:(int16_t)quality
@@ -57,11 +64,20 @@
 
 - (NSString *) chordSymbol {
     NSArray *noteNames = @[@"C",@"Db",@"D",@"Eb",@"E",@"F",@"Gb",@"G",@"Ab",@"A",@"Bb",@"B"];
-    NSArray *noteQualities = @[@"",@"m",@"dim",@"aug",@"7",@"sus"];
-    NSArray *extension = @[@"6",@"7",@"M7",@"b9",@"9",@"#9",@"11",@"#11",@"b13",@"13"];
+    NSArray *chordQualities = @[@"",@"m",@"dim",@"aug",@"7",@"sus"];
+    NSArray *extension = @[@"",@"6",@"7",@"M7",@"b9",@"9",@"#9",@"11",@"#11",@"b13",@"13"];
     
-    NSInteger extensionIndex = [self.extensions[0] integerValue];
+    NSInteger extensionIndex;
+    NSMutableString *extensionString = [[NSMutableString alloc] init];
     
-    return [NSString stringWithFormat:@"%@%@%@",noteNames[self.root%12],noteQualities[self.quality],extension[extensionIndex]];
+    if (self.extensions != nil) {
+        extensionIndex = [self.extensions[0] integerValue];
+        NSString *nextExtension = [NSString stringWithFormat:@"%@",extension[extensionIndex]];
+        [extensionString appendString:nextExtension];
+    } else {
+        [extensionString appendString:@""];
+    }
+    
+    return [NSString stringWithFormat:@"%@%@%@",noteNames[self.root%12],chordQualities[self.quality],extensionString];
 }
 @end

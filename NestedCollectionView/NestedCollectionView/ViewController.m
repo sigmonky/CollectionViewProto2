@@ -26,10 +26,10 @@
     
     _progression = [[Progression alloc ] init];
     
-    NSNumber *sixthExt = [NSNumber numberWithInt:Six];
+    NSNumber *sixthExt = [Chord extension:Six];
     _progression.chordProgression = (NSMutableArray *)@
     [
-     [[Chord alloc] initWithRoot:60  quality:ChordQualityMajor extension:(NSMutableArray *)@[sixthExt]],
+     [[Chord alloc] initWithRoot:60  quality:ChordQualityMajor extension:(NSMutableArray *)@[[Chord extension:Six]]],
      [[Chord alloc] initWithRoot:60  quality:ChordQualityMajor extension:nil],
      [[Chord alloc] initWithRoot:64 quality:ChordQualityDominant extension:nil],
      [[Chord alloc] initWithRoot:64 quality:ChordQualityDominant extension:nil],

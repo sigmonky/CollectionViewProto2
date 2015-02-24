@@ -19,6 +19,7 @@ typedef NS_ENUM(NSUInteger, ChordQualities) {
 };
 
 typedef NS_ENUM(int16_t, ChordExtensions) {
+    None,
     Six,
     Seven,
     MajorSeven,
@@ -36,11 +37,14 @@ typedef NS_ENUM(int16_t, ChordExtensions) {
 @property (nonatomic,assign) int16_t quality;
 @property (nonatomic,strong) NSMutableArray *extensions;
 
+
+
 -(id) initWithRoot:(int16_t)root
            quality:(int16_t)quality
          extension:(NSMutableArray *)extensions;
 
 - (NSMutableArray *)getChordMembers;
++ (NSNumber *) extension:(ChordExtensions)extension;
 - (int16_t)getBassNote;
 - (NSString *) chordSymbol;
 
