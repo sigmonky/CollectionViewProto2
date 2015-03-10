@@ -71,9 +71,11 @@
     NSMutableString *extensionString = [[NSMutableString alloc] init];
     
     if (self.extensions != nil) {
-        extensionIndex = [self.extensions[0] integerValue];
-        NSString *nextExtension = [NSString stringWithFormat:@"%@",extension[extensionIndex]];
-        [extensionString appendString:nextExtension];
+        for ( int16_t x = 0; x < self.extensions.count;x++) {
+            extensionIndex = [self.extensions[x] integerValue];
+            NSString *nextExtension = [NSString stringWithFormat:@"%@",extension[extensionIndex]];
+            [extensionString appendString:nextExtension];
+        }
     } else {
         [extensionString appendString:@""];
     }
