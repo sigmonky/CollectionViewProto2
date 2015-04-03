@@ -20,7 +20,7 @@
 }
 
 - (void) fuckMe {
-    self.labelView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5];
+    self.basicChordLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5];
     [self setNeedsDisplay];
 }
 

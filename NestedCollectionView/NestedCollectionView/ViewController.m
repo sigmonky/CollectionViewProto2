@@ -26,25 +26,24 @@
     
     _progression = [[Progression alloc ] init];
     
-    NSNumber *sixthExt = [Chord extension:Six];
     _progression.chordProgression = (NSMutableArray *)@
     [
-     [[Chord alloc] initWithRoot:60  quality:ChordQualityMajor extension:(NSMutableArray *)@[[Chord extension:Six],[Chord extension:Nine]]],
-     [[Chord alloc] initWithRoot:60  quality:ChordQualityMajor extension:nil],
-     [[Chord alloc] initWithRoot:64 quality:ChordQualityDominant extension:nil],
-     [[Chord alloc] initWithRoot:64 quality:ChordQualityDominant extension:nil],
-     [[Chord alloc] initWithRoot:69 quality:ChordQualityDominant extension:nil],
-     [[Chord alloc] initWithRoot:69 quality:ChordQualityDominant extension:nil],
-     [[Chord alloc] initWithRoot:62 quality:ChordQualityMinor extension:nil],
-     [[Chord alloc] initWithRoot:62 quality:ChordQualityMinor extension:nil],
-     [[Chord alloc] initWithRoot:64 quality:ChordQualityDominant extension:nil],
-     [[Chord alloc] initWithRoot:64 quality:ChordQualityDominant extension:nil],
-     [[Chord alloc] initWithRoot:69 quality:ChordQualityMinor extension:nil],
-     [[Chord alloc] initWithRoot:69 quality:ChordQualityMinor extension:nil],
-     [[Chord alloc] initWithRoot:62 quality:ChordQualityDominant extension:nil],
-     [[Chord alloc] initWithRoot:62 quality:ChordQualityDominant extension:nil],
-     [[Chord alloc] initWithRoot:62 quality:ChordQualityMinor extension:nil],
-     [[Chord alloc] initWithRoot:67 quality:ChordQualityDominant extension:nil]
+     [[Chord alloc] initWithRoot:60  quality:M
+                       extension:(NSMutableArray *)@[[Chord extension:n6],[Chord extension:n9]]],
+     [[Chord alloc] initWithRoot:60  quality:M extension:nil],
+     [[Chord alloc] initWithRoot:64 quality:dom extension:nil],
+     [[Chord alloc] initWithRoot:64 quality:dom extension:nil],
+     [[Chord alloc] initWithRoot:69 quality:dom extension:nil],
+     [[Chord alloc] initWithRoot:69 quality:dom extension:nil],
+     [[Chord alloc] initWithRoot:62 quality:M extension:nil],
+     [[Chord alloc] initWithRoot:62 quality:m extension:nil],
+     [[Chord alloc] initWithRoot:64 quality:dom extension:nil],
+     [[Chord alloc] initWithRoot:64 quality:dom extension:nil],
+     [[Chord alloc] initWithRoot:69 quality:m extension:nil],
+     [[Chord alloc] initWithRoot:69 quality:m extension:nil],
+     [[Chord alloc] initWithRoot:62 quality:dom extension:nil],
+     [[Chord alloc] initWithRoot:62 quality:dom extension:nil],
+     [[Chord alloc] initWithRoot:62 quality:m extension:nil]     
      ];
     
     
@@ -69,7 +68,8 @@
     long row = [indexPath row];
     
     //myCell.labelView.backgroundColor = [UIColor yellowColor];
-    myCell.labelView.text = [_progression.chordProgression[row] chordSymbol];
+    myCell.basicChordLabel.text = [_progression.chordProgression[row] chordSymbol];
+    myCell.extensions.text = @"13";
     NSLog(@"cellForItem %@ -- %@",[collectionView indexPathsForSelectedItems],indexPath);
     /*if (self.selectedCell) {
         //myCell.labelView.backgroundColor = [UIColor yellowColor];

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MyCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UILabel *labelView;
+@property (weak, nonatomic) IBOutlet UILabel *basicChordLabel;
+@property (weak, nonatomic) IBOutlet UILabel *extensions;
+
 - (void) fuckMe;
 @end

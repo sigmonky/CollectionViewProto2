@@ -17,49 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wSY-Ka-QuZ">
-                                <rect key="frame" x="62" y="64" width="300" height="149"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="149" id="89A-eS-tkf"/>
-                                    <constraint firstAttribute="width" constant="300" id="T7Z-Zz-NDs"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="1" id="jOz-us-2xJ">
-                                    <size key="itemSize" width="113" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Measure" reuseIdentifier="Measure" id="Pcd-1C-hAF" customClass="MyCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="50" width="154" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="113" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPA-Ch-aK6">
-                                                    <rect key="frame" x="11" y="14" width="47" height="21"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="IPA-Ch-aK6" firstAttribute="top" secondItem="Pcd-1C-hAF" secondAttribute="top" constant="14" id="4SC-5B-Bma"/>
-                                            <constraint firstItem="IPA-Ch-aK6" firstAttribute="leading" secondItem="Pcd-1C-hAF" secondAttribute="leading" constant="11" id="E7p-uc-lcF"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="IPA-Ch-aK6" secondAttribute="trailing" constant="47" id="dAf-Ls-A5c"/>
-                                            <constraint firstAttribute="bottom" secondItem="IPA-Ch-aK6" secondAttribute="bottom" constant="15" id="dHZ-qi-FCL"/>
-                                            <constraint firstAttribute="trailing" secondItem="IPA-Ch-aK6" secondAttribute="trailing" constant="12" id="fLj-4n-W7O"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="labelView" destination="IPA-Ch-aK6" id="Wc3-8k-nwG"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amk-R2-fsa">
                                 <rect key="frame" x="165" y="550" width="63" height="30"/>
                                 <state key="normal" title="Playback">
@@ -82,10 +39,134 @@
                                     <action selector="chordSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="usp-49-ooV"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wSY-Ka-QuZ">
+                                <rect key="frame" x="62" y="64" width="300" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="89A-eS-tkf"/>
+                                    <constraint firstAttribute="width" constant="300" id="T7Z-Zz-NDs"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="1" id="jOz-us-2xJ">
+                                    <size key="itemSize" width="104" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Measure" reuseIdentifier="Measure" id="Pcd-1C-hAF" customClass="MyCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="50" width="154" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="104" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPA-Ch-aK6">
+                                                    <rect key="frame" x="11" y="14" width="47" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="27" id="2ad-2J-ip8"/>
+                                                        <constraint firstAttribute="height" constant="21" id="MQO-kK-FIl"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="2ad-2J-ip8"/>
+                                                            <exclude reference="MQO-kK-FIl"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="2ad-2J-ip8"/>
+                                                            <include reference="MQO-kK-FIl"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="b9#11b13" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgo-JH-ehM">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="62" id="NeI-3R-OSP"/>
+                                                        <constraint firstAttribute="height" constant="15" id="Q8t-NP-KR1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="NeI-3R-OSP"/>
+                                                            <exclude reference="Q8t-NP-KR1"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="NeI-3R-OSP"/>
+                                                            <include reference="Q8t-NP-KR1"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="IPA-Ch-aK6" secondAttribute="bottom" constant="7" id="3ZG-0j-1l8"/>
+                                            <constraint firstItem="Rgo-JH-ehM" firstAttribute="top" secondItem="Pcd-1C-hAF" secondAttribute="top" constant="12" id="3yo-G4-byz"/>
+                                            <constraint firstItem="IPA-Ch-aK6" firstAttribute="top" secondItem="Pcd-1C-hAF" secondAttribute="top" constant="14" id="4SC-5B-Bma"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rgo-JH-ehM" secondAttribute="trailing" id="C8f-eB-qVI"/>
+                                            <constraint firstItem="IPA-Ch-aK6" firstAttribute="leading" secondItem="Pcd-1C-hAF" secondAttribute="leading" constant="11" id="E7p-uc-lcF"/>
+                                            <constraint firstItem="IPA-Ch-aK6" firstAttribute="leading" secondItem="Pcd-1C-hAF" secondAttribute="leadingMargin" constant="3" id="MUZ-ch-LQ0"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="IPA-Ch-aK6" secondAttribute="trailing" constant="58" id="OSu-Xv-Sl0"/>
+                                            <constraint firstItem="Rgo-JH-ehM" firstAttribute="leading" secondItem="IPA-Ch-aK6" secondAttribute="trailing" constant="4" id="acy-JN-bbt"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="IPA-Ch-aK6" secondAttribute="trailing" constant="47" id="dAf-Ls-A5c"/>
+                                            <constraint firstAttribute="bottom" secondItem="IPA-Ch-aK6" secondAttribute="bottom" constant="15" id="dHZ-qi-FCL"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rgo-JH-ehM" secondAttribute="bottom" constant="23" id="fiw-vm-8FM"/>
+                                            <constraint firstItem="IPA-Ch-aK6" firstAttribute="top" secondItem="Pcd-1C-hAF" secondAttribute="topMargin" constant="6" id="q1y-Vr-GSH"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="Rgo-JH-ehM"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="3ZG-0j-1l8"/>
+                                                <exclude reference="MUZ-ch-LQ0"/>
+                                                <exclude reference="OSu-Xv-Sl0"/>
+                                                <exclude reference="q1y-Vr-GSH"/>
+                                                <exclude reference="3yo-G4-byz"/>
+                                                <exclude reference="C8f-eB-qVI"/>
+                                                <exclude reference="acy-JN-bbt"/>
+                                                <exclude reference="fiw-vm-8FM"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="Rgo-JH-ehM"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="3ZG-0j-1l8"/>
+                                                <exclude reference="4SC-5B-Bma"/>
+                                                <exclude reference="E7p-uc-lcF"/>
+                                                <include reference="MUZ-ch-LQ0"/>
+                                                <exclude reference="OSu-Xv-Sl0"/>
+                                                <exclude reference="dAf-Ls-A5c"/>
+                                                <exclude reference="dHZ-qi-FCL"/>
+                                                <include reference="q1y-Vr-GSH"/>
+                                                <include reference="3yo-G4-byz"/>
+                                                <include reference="C8f-eB-qVI"/>
+                                                <include reference="acy-JN-bbt"/>
+                                                <include reference="fiw-vm-8FM"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="basicChordLabel" destination="IPA-Ch-aK6" id="Swl-Zr-bsg"/>
+                                            <outlet property="extensions" destination="Rgo-JH-ehM" id="Lo3-60-MEy"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wSY-Ka-QuZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="44" id="Crp-HJ-gkh"/>
+                            <constraint firstItem="wSY-Ka-QuZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="DHP-kX-Ac4"/>
                             <constraint firstItem="Mct-uj-mSz" firstAttribute="top" secondItem="Was-Zm-JvY" secondAttribute="bottom" id="Dnd-Kn-ird"/>
                             <constraint firstItem="Mct-uj-mSz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="85" id="H23-cx-Uj0"/>
                             <constraint firstItem="Was-Zm-JvY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="46" id="JF2-OM-Yej"/>
@@ -97,12 +178,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Was-Zm-JvY" secondAttribute="trailing" constant="-4" id="ccL-Jh-Lz8"/>
                             <constraint firstItem="Was-Zm-JvY" firstAttribute="top" secondItem="wSY-Ka-QuZ" secondAttribute="bottom" constant="48" id="dPn-d4-mfs"/>
                             <constraint firstItem="amk-R2-fsa" firstAttribute="top" secondItem="Was-Zm-JvY" secondAttribute="bottom" constant="1" id="e9o-EP-aim"/>
-                            <constraint firstItem="wSY-Ka-QuZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="46" id="lAR-QZ-gBr"/>
                             <constraint firstItem="Was-Zm-JvY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="sDO-tb-5Bl"/>
                             <constraint firstAttribute="bottom" secondItem="Mct-uj-mSz" secondAttribute="bottom" constant="20" symbolic="YES" id="zoT-nb-vRt"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="DHP-kX-Ac4"/>
                                 <exclude reference="YSo-nJ-xov"/>
                                 <exclude reference="ccL-Jh-Lz8"/>
                                 <exclude reference="dPn-d4-mfs"/>
@@ -112,6 +193,7 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
+                                <include reference="DHP-kX-Ac4"/>
                                 <exclude reference="JHb-y3-mAX"/>
                                 <exclude reference="JF2-OM-Yej"/>
                                 <exclude reference="R7m-OW-tFd"/>
@@ -130,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-119" y="-194"/>
+            <point key="canvasLocation" x="-120" y="-144"/>
         </scene>
         <!--Chord View Controller-->
         <scene sceneID="594-hm-mSd">

@@ -10,26 +10,26 @@
 
 
 typedef NS_ENUM(NSUInteger, ChordQualities) {
-    ChordQualityMajor,
-    ChordQualityMinor,
-    ChordQualityDiminished,
-    ChordQualityAugmented,
-    ChordQualityDominant,
-    ChordQualitySuspended
+    M,
+    m,
+    dim,
+    aug,
+    dom,
+    sus
 };
 
 typedef NS_ENUM(int16_t, ChordExtensions) {
     None,
-    Six,
-    Seven,
-    MajorSeven,
-    FlatNine,
-    Nine,
-    SharpNine,
-    Eleven,
-    SharpEleven,
-    FlatThirteen,
-    Thirteen
+    n6,
+    b7,
+    M7,
+    b9,
+    n9,
+    s9,
+    n11,
+    s11,
+    f13,
+    n13
 };
 
 @interface Chord : NSObject
